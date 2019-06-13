@@ -3,7 +3,7 @@ import mongoosePaginate from 'mongoose-paginate'
 import { UserInterface } from '../intefaces/UserInterface'
 
 const UserSchema = new mongoose.Schema({
-  IdFinancialPosition: { type: mongoose.Schema.Types.ObjectId,
+  FinancialPosition: { type: mongoose.Schema.Types.ObjectId,
     required: true
   },
   Email: { type: String,

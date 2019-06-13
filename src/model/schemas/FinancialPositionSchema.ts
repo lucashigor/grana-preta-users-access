@@ -7,7 +7,9 @@ const FinancialPositionSchema = new mongoose.Schema({
     required: true
   },
   Users: [{
-    type: mongoose.Schema.Types.ObjectId
+    _id: {
+      type: mongoose.Schema.Types.ObjectId
+    }
   }]
 }, {
   timestamps: true

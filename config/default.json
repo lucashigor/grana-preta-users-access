@@ -1,0 +1,18 @@
+{
+  "jwtSecret": "@QEGTUI",
+  "server": {
+    "port": 3335,
+    "host": "0.0.0.0"
+  },
+  "app": {
+    "dbConfig": {
+      "conectionString": "mongodb+srv://omnistack:omnistack@cluster0-hnuek.mongodb.net/grana-preta-financial-position",
+      "port": 5984,
+      "dbName": "customers"
+    },
+    "credit": {
+      "initialLimit": 100,
+      "initialDays": 1
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
+import config from 'config'
 
 import routes from './routes'
 import bodyParser = require('body-parser');
@@ -23,7 +24,9 @@ class App {
     }
 
     private database (): void {
-      mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-hnuek.mongodb.net/grana-preta-financial-position', {
+      var conectionString : string = config.get('app.dbConfig.conectionString')
+
+      mongoose.connect(conectionString, {
         useNewUrlParser: true
       })
     }

@@ -1,6 +1,7 @@
 import app from './app'
+import config from 'config'
 
-const PORT = 3335
-const HOST = '0.0.0.0'
+var port : number = config.get('server.port')
+var host : string = config.get('server.host')
 
-app.listen(PORT, HOST)
+app.listen(port, host)

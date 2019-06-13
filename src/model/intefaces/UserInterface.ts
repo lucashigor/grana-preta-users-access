@@ -4,5 +4,5 @@ export interface UserInterface extends mongoose.Document {
 Email: string;
 FirstName: string;
 LastName: string;
-IdFinancialPosition: mongoose.Schema.Types.ObjectId;
+FinancialPosition: mongoose.Schema.Types.ObjectId;
 }
