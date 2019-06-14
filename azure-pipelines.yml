@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'node:alpine'
 
 steps:
 - task: NodeTool@0
@@ -17,6 +17,7 @@ steps:
 
 - script: |
     npm install --save yarn-install
+    rm ./package-lock.json
     yarn
     yarn build
   displayName: 'npm install and build'
