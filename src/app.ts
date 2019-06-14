@@ -14,7 +14,7 @@ class App {
 
       this.middlewares()
       this.routes()
-      this.database()
+      //this.database()
     }
 
     private middlewares (): void {
