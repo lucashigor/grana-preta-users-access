@@ -37,7 +37,6 @@ class RepositoryBase<T extends mongoose.Document> implements ReadInterface<T>, W
 
     public async retrieve (page : number, limit: number): Promise<Document[]> {
       if (limit > page) {
-        console.log('b')
       }
 
       const users = await this._model.find({})
