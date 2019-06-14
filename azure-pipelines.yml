@@ -4,23 +4,23 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+  - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "10.x"
+    displayName: "Install Node.js"
 
-- script: |
-    npm install --save yarn-install
-    rm ./package-lock.json
-    yarn
-    yarn build
-  displayName: 'npm install and build'
+  - script: |
+      npm install --save yarn-install
+      rm ./package-lock.json
+      yarn
+      yarn build
+    displayName: "npm install and build"
 
--task: PublishBuildArtifacts@1
-  displayName: 'publish artifacts'
+  - task: PublishBuildArtifacts@1
+    displayName: "publish artifacts"
