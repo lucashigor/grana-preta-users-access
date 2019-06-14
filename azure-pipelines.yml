@@ -20,6 +20,7 @@ steps:
       rm ./package-lock.json
       yarn
       yarn build
+      copy ./dist $(Build.ArtifactStagingDirectory)
     displayName: "npm install and build"
 
   - task: PublishBuildArtifacts@1
