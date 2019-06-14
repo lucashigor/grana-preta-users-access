@@ -14,7 +14,7 @@ class App {
 
       this.middlewares()
       this.routes()
-      //this.database()
+      this.database()
     }
 
     private middlewares (): void {
@@ -24,7 +24,7 @@ class App {
     }
 
     private database (): void {
-      var conectionString : string = config.get('app.dbConfig.conectionString')
+      var conectionString : string = "mongodb+srv://omnistack:omnistack@cluster0-hnuek.mongodb.net/grana-preta-financial-position"
 
       mongoose.connect(conectionString, {
         useNewUrlParser: true
